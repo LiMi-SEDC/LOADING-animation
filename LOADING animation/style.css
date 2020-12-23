@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  #b71540;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+h1{
+    font-size: 5rem;
+}
+
+.main h1::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    width: 0px;     
+    height: 90px;
+    background-color: #fff;
+    animation: block 3s ease-in-out infinite;
+}
+.box{
+    position: relative;
+    top: -90px;
+    width: 350px;
+    height: 90px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+@keyframes block{
+    0%{width: 0%;}
+    50%{width: 100%;}
+    75%{width: 100%;}
+    100%{width: 100%; opacity: 0;}
+}
